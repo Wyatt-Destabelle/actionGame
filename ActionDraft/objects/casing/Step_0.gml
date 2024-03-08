@@ -8,6 +8,7 @@ speed += .1;
 
 if(abs(y - startY) > 100)
 {
+depth = 0;
 speed = 0;
 rotateSpeed = 0;
 }
