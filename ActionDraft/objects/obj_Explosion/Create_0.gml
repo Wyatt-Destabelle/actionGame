@@ -1,0 +1,4 @@
+audio_play_sound(_625114__newlocknew__expldsgn_powerful_explosion_21_em_28lrs,0,0)
+
+
+
