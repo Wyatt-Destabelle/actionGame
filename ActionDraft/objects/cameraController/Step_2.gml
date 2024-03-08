@@ -10,7 +10,13 @@ if(shakeLength)
 camera_set_view_pos(view_camera[0],x-cameraWidth,y-cameraHeight);
 
 
-
-
+if(keyboard_check_pressed(ord("L")))
+{
+	instance_create_depth(mouse_x,mouse_y,-3,heavy_enemy_obj);
+}
+if(keyboard_check_pressed(ord("P")))
+{
+	instance_create_depth(mouse_x,mouse_y,-3,spider_enemy_obj);
+}
 
 
