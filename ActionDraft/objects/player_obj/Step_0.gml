@@ -1,18 +1,25 @@
+depth = -y;
 if(death)
-//die
 {
+	if(!dm)
+		dm = instance_create_depth(global.cameraID.x,global.cameraID.y,-7000,obj_deathManager)
 	return;
 }
+if(speed > 0)
+{
+	speed = lerp(speed,0,slowSpeed)
+}
+if(lock)
+{
+	sprite_index = sprite_player_standing;
+	return;
+}
+
+
 if(mLock)
 {
 	mLock -= 1;
-	if(kbackArray != 0)
-	{
-		x += lengthdir_x(kbackArray[mLock],direction);
-		y += lengthdir_y(kbackArray[mLock],direction);
-	}
-	if(!mLock)
-		kbackArray = 0;
+
 		
 	s = sAbs - sAbs*(mLock /mLockL);
 }
@@ -24,28 +31,56 @@ if(keyboard_check(ord("W")))
 {
 	input_y = -1;
 	moving = 1;
+		if(place_meeting(x+20,y-10,global.collisionList) && place_meeting(x-20,y-10,global.collisionList))
+	{
+			input_y = 0;
+		moving = 0;
+	}
 }
 else if(keyboard_check(ord("S")))
 {
 	input_y = 1;
 	moving = 1;
+	if(place_meeting(x+20,y+10,global.collisionList) && place_meeting(x-20,y+10,global.collisionList))
+	{
+			input_y = 0;
+		moving = 0;
+	}
 }
 if(keyboard_check(ord("A")))
 {
-	input_x = -1;
-	moving = 1;
+
 	d = -1
+		if(place_meeting(x-30,y+30,global.collisionList) && place_meeting(x-30,y-30,global.collisionList))
+	{
+		input_x = 0;
+		moving = moving;
+	}
+	else
+	{
+			input_x = -1;
+			moving = 1;
+	}
 }
 else if(keyboard_check(ord("D")))
 {
-	input_x = 1;
-	moving = 1;
+
 	d = 1;
+		if(place_meeting(x+30,y+30,global.collisionList) && place_meeting(x+30,y-30,global.collisionList))
+	{
+		input_x = 0;
+		moving = moving;
+	}
+	else
+	{
+			input_x = 1;
+			moving = 1;
+	}
 }
 
 if(moving)
 {
-	sprite_index = PlayerWalking;
+	sprite_index = sprite_player_walking;
 	if(d)
 	{	
 		if(mouse_x > x)
@@ -75,7 +110,7 @@ if(moving)
 }
 else
 {
-	sprite_index = PlayerStanding;
+	sprite_index = sprite_player_standing;
 }
 
 if(abs(input_x) && abs(input_y))
@@ -86,23 +121,6 @@ if(abs(input_x) && abs(input_y))
 
 x+= s* input_x;
 y += s* input_y;
-
-if(keyboard_check_pressed(ord("G")) && grenades)
-{
-	grenadePrimed = 1;
-	grenadeID = instance_create_depth(mouse_x,mouse_y,0,obj_grenade_indicator);
-}
-
-if(keyboard_check_released(ord("G")) && grenadePrimed)
-{
-	grenadeID.mouseFollow = 0;
-	grenadeID = instance_create_depth(x,y,-5,obj_grenade)
-	grenadeID.targetX = mouse_x;
-	grenadeID.targetY = mouse_y;
-	grenadeID.direction = point_direction(x,y,mouse_x,mouse_y);
-	grenadeID.speed = 6;
-	grenadePrimed = 0
-}
 
 
 

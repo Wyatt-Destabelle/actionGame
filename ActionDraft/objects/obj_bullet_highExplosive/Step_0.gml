@@ -1,13 +1,8 @@
 t += 1;
 if(abs(x-spotX) <= 16 && abs(y - spotY) <= 16)
 {
-	speed = 0
-	sprite_index = expl
-	if(t < 3)
-	{
-		audio_play_sound(sound_airburst,0,0);
-	}
-	t = 3;
+	instance_create_depth(x,y,-1500,obj_airburst)
+	instance_destroy()
 }
 
 if(t == 2)

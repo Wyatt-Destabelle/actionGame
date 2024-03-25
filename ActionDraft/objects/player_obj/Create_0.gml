@@ -11,4 +11,6 @@ moving = 0;
 d = 1;
 death = 0;
 hp = 3;
-
+slowSpeed = .35;
+lock = 0;
+dm = 0;

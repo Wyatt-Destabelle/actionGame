@@ -1,4 +1,4 @@
-if(sprite_index == expl)
+if(sprite_index == sprite_explosion)
 {
 	instance_destroy()
 }

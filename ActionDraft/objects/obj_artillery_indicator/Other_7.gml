@@ -1,4 +1,4 @@
-instance_create_depth(x,y,-1,obj_Explosion);
+instance_create_depth(x,y,-1,obj_mortarExplosion);
 instance_destroy()
 
 

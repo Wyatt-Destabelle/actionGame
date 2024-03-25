@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 4.937506,
   "parent": {
-    "name": "ActionDraft",
-    "path": "ActionDraft.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,

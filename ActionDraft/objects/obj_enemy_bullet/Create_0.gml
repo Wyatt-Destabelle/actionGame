@@ -1,0 +1,1 @@
+collList = [obj_wall,obj_wallLeft,obj_wallRight,obj_rock1]

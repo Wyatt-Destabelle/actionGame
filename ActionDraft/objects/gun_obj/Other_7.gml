@@ -1,4 +1,4 @@
-if(sprite_index != gunidle)
+if(sprite_index != gun2)
 {
-	sprite_index = gunidle;
+	sprite_index = gun2;
 }

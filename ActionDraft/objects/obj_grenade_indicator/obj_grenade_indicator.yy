@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "ActionDraft",
-    "path": "ActionDraft.yyp",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite17",
-    "path": "sprites/Sprite17/Sprite17.yy",
+    "name": "sprite_grenade_indicator",
+    "path": "sprites/sprite_grenade_indicator/sprite_grenade_indicator.yy",
   },
   "spriteMaskId": null,
   "visible": true,

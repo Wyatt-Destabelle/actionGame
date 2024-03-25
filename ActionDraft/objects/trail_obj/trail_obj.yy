@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite5a",
-    "path": "sprites/Sprite5a/Sprite5a.yy",
+    "name": "sprite_player_BulletTrail",
+    "path": "sprites/sprite_player_BulletTrail/sprite_player_BulletTrail.yy",
   },
   "spriteMaskId": null,
   "visible": true,
